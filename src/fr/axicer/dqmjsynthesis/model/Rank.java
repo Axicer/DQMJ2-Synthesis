@@ -20,4 +20,9 @@ public enum Rank {
 	public boolean isHigherorEqualsThen(Rank rank) {
 		return id >= rank.id;
 	}
+	
+	@Override
+	public String toString() {
+		return this == MAX ? "???" : super.toString();
+	}
 }
