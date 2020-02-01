@@ -134,4 +134,9 @@ public enum Gluants implements Monster{
 		GLUANT_D_OR.synthesis = new GrandParentSynthesis(Matieres.PHIX, Matieres.PHIX, Gluants.GLUANCIEN, Gluants.GLUANCIEN);
 
 	}
+	
+	@Override
+	public String toString() {
+		return name()+" ("+rank+")";
+	}
 }

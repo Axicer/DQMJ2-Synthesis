@@ -112,4 +112,9 @@ public enum Dragons implements Monster{
 		
 		DRAGON_DU_ZENITH.synthesis = new GrandParentSynthesis(Demons.NOKTURNUS,Dragons.XENLON,Dragons.LORDRACO,Matieres.SAGITAURE);
 	}
+	
+	@Override
+	public String toString() {
+		return name()+" ("+rank+")";
+	}
 }

@@ -101,4 +101,9 @@ public enum Matieres implements Monster{
 		SAGITAURE.synthesis = new GrandParentSynthesis(Matieres.TRAUMINATOR,Matieres.BOITE_A_PIEGE,Matieres.MACHINE_A_TUER,Matieres.MACHINE_A_EXTERMINER);
 		ESTARK.synthesis = new ParentSynthesis(Matieres.PSARO,Betes.LORD_LIONEL);
 	}
+	
+	@Override
+	public String toString() {
+		return name()+" ("+rank+")";
+	}
 }

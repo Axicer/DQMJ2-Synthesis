@@ -73,4 +73,9 @@ public enum Incarnus implements Monster{
 		LIONYX.synthesis = new GrandParentSynthesis(Incarnus.JOKER,Dragons.HYDRAGON,Betes.MISTER_TAUPE,Betes.LORD_LIONEL);
 		RIGOR_MORTEX.synthesis = new ParentSynthesis(Incarnus.LIONYX,Dragons.DRAGON_DU_ZENITH);
 	}
+	
+	@Override
+	public String toString() {
+		return name()+" ("+rank+")";
+	}
 }

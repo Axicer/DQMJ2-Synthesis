@@ -98,4 +98,9 @@ public enum Betes implements Monster{
 		DHOULMAGUS.synthesis = new ParentSynthesis(Dragons.DRAGON_D_ALBATRE,Matieres.PSARO);
 		SANGUINI_VACHE_XY.synthesis = new ParentSynthesis(Betes.SANGUINI_VACHE_X,Betes.SANGUINI_VACHE_X);
 	}
+	
+	@Override
+	public String toString() {
+		return name()+" ("+rank+")";
+	}
 }

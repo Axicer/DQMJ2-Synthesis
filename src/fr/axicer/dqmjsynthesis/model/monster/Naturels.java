@@ -101,4 +101,9 @@ public enum Naturels implements Monster{
 		TRODE.synthesis = new GrandParentSynthesis(Demons.NOKTURNUS,Dragons.XENLON,Gluants.GLUANT_D_OR,Gluants.CANZER);
 		GRAND_OISEAU_CELESTE.synthesis = new ParentSynthesis(Dragons.SEIGNEUR_DRAGOVIEN, Naturels.EMPYREA);
 	}
+	
+	@Override
+	public String toString() {
+		return name()+" ("+rank+")";
+	}
 }

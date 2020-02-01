@@ -93,4 +93,9 @@ public enum Zombies implements Monster{
 		
 		DR_REBELOTE.synthesis = new GrandParentSynthesis(Gluants.GLUANT_DE_TENERIUM,Incarnus.RAPHTORNE_II,Incarnus.ORGODEMIR,Zombies.CAPITAINE_CROW);
 	}
+	
+	@Override
+	public String toString() {
+		return name()+" ("+rank+")";
+	}
 }

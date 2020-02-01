@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreeNode;
+
 import fr.axicer.dqmjsynthesis.model.Rank;
 import fr.axicer.dqmjsynthesis.model.monster.Monster;
 import fr.axicer.dqmjsynthesis.model.synthesis.Synthesis;
@@ -66,6 +69,25 @@ public class SynthesisCalculator {
 				s.getMonsters().forEach(m -> {
 						list.add(m);
 						recFetchAll(list, m);
+				});
+			}
+		}
+	}
+	
+	public TreeNode toTreeNode(){
+		DefaultMutableTreeNode node = new DefaultMutableTreeNode(target);
+		recTreeNode(target, node);
+		return node;
+	}
+	
+	private void recTreeNode(Monster monster, DefaultMutableTreeNode node) {
+		if(monster != null) {
+			if(monster.getSynthesis() != null && monster.getRank().isHigherorEqualsThen(rankTarget)) {
+				Synthesis s = monster.getSynthesis();
+				s.getMonsters().forEach(m -> {
+					DefaultMutableTreeNode newNode = new DefaultMutableTreeNode(m);
+					node.add(newNode);
+					recTreeNode(m, newNode);
 				});
 			}
 		}

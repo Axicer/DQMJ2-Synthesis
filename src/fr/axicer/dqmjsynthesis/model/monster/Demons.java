@@ -100,4 +100,9 @@ public enum Demons implements Monster{
 		
 		NOKTURNUS.synthesis = new ParentSynthesis(Demons.DHURIAN,Zombies.DR_REBELOTE);
 	}
+	
+	@Override
+	public String toString() {
+		return name()+" ("+rank+")";
+	}
 }
